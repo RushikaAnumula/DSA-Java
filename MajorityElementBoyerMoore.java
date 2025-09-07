@@ -7,7 +7,7 @@ Example 2:
 Input: nums = [2,2,1,1,1,2,2]
 Output: 2*/
 import java.util.*;
-class MajorityElement{
+class MajorityElementBoyerMoore{
   public static void main(String[] args){
   	Scanner sc=new Scanner(System.in);
   	int n=sc.nextInt();
