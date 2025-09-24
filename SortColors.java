@@ -8,7 +8,7 @@ Example 2:
 Input: nums = [2,0,1]
 Output: [0,1,2]*/
 import java.util.*;
-class SortColors{
+class SortColorsCounting{
 	public static void main(String[] args){
 		Scanner sc=new Scanner(System.in);
 		int n=sc.nextInt();
