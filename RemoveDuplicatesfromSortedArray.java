@@ -19,7 +19,7 @@ output=5
 Explanation: Your function should return 5, with the first five elements of 
 input array being 0, 1, 2, 3, and 4 respectively */
 import java.util.*;
-class RemoveDuplicates{
+class RemoveDuplicatesfromSortedArray{
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
         int num=sc.nextInt();
