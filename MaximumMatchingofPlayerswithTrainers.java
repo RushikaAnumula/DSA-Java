@@ -26,7 +26,7 @@ class MaximumMatchingofPlayerswithTrainers{
 		}
 		int m=sc.nextInt();
 		int trainers[]=new int[m];
-		for(int i=0;i<n;i++){
+		for(int i=0;i<m;i++){
 			trainers[i]=sc.nextInt();
 		}
 		System.out.print(match(players,trainers));
