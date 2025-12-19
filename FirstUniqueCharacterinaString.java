@@ -11,7 +11,7 @@ Example 3:
 Input: s = "aabb"
 Output: -1*/
 import java.util.*;
-class FirstUniqueChar{
+class FirstUniqueCharacterinaString{
 	public static void main(String[] args){
 		Scanner sc=new Scanner(System.in);
 		String s=sc.next();
