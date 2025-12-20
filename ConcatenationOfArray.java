@@ -26,14 +26,14 @@ class ConcatenationOfArray{
 		for(int i=0;i<n;i++){
 			nums[i]=sc.nextInt();
 		}
-		System.out.print(Arrays.toString(concat(nums)));
+		System.out.print(Arrays.toString(getConcatenation(nums)));
 	}
-	public static int[] concat(int[] nums){
-		int[] arr=new int[2*nums.length];
+	public static int[] getConcatenation(int[] nums){
+		int[] ans=new int[2*nums.length];
 		for(int i=0;i<nums.length;i++){
-			arr[i]=nums[i];
-			arr[i+nums.length]=nums[i];
+			ans[i]=nums[i];
+			ans[i+nums.length]=nums[i];
 		}
-		return arr;
+		return ans;
 	}
 }
