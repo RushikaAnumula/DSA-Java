@@ -8,7 +8,7 @@ Example 2:
 Input: nums = [0]
 Output: [0]*/
 import java.util.*;
-class SortArrayByParity{
+class SortArrayByParityList{
 	public static void main(String[] args){
 		Scanner sc=new Scanner(System.in);
 		int n=sc.nextInt();
