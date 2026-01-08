@@ -7,40 +7,34 @@ Explanation: Number 2 is repeated and number 4 is missing so the answer is [2,4]
 Example 2:
 Input: grid = [[9,1,7],[8,9,2],[3,4,6]]
 Output: [9,5]
-Explanation: Number 9 is repeated and number 5 is missing so the answer is [9,5].
-Constraints:
-2 <= n == grid.length == grid[i].length <= 50
-1 <= grid[i][j] <= n * n
-For all x that 1 <= x <= n * n there is exactly one x that is not equal to any of the grid members.
-For all x that 1 <= x <= n * n there is exactly one x that is equal to exactly two of the grid members.
-For all x that 1 <= x <= n * n except two of them there is exactly one pair of i, j that 0 <= i, j <= n - 1 and grid[i][j] == x.*/
+Explanation: Number 9 is repeated and number 5 is missing so the answer is [9,5].*/
 import java.util.*;
 class FindMissingAndRepeatedValuesHashMap{
-  public static void main(String[] args){
-    Scanner sc=new Scanner(System.in);
-    int n=sc.nextInt();
-    int[][] grid=new int[n][n];
-        for (int i=0;i<n;i++) {
-            for (int j=0;j<n;j++) {
-                grid[i][j]=sc.nextInt();
-            }
-        }
-        System.out.print(Arrays.toString(findMissingAndRepeatedValues(grid)));
-  }
-  public static int[] findMissingAndRepeatedValues(int[][] grid) {
-    int n=grid.length;
-    HashMap<Integer,Integer> map=new HashMap<>();
-    for(int[] row:grid){
-        for(int num:row){
-            map.put(num,map.getOrDefault(num,0)+1);
-        }
-    }
-    int repeated=-1,missing=-1;
-    for(int i=1;i<=n*n;i++){
-      int freq=map.getOrDefault(i,0);
-      if(freq==2) repeated=i;
-      if(freq==0) missing=i;
-    }
-    return new int[]{repeated,missing};
-  }
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int[][] grid=new int[n][n];
+		for(int i=0;i<n;i++){
+			for(int j=0;j<n;j++){
+				grid[i][j]=sc.nextInt();
+			}
+		}
+		System.out.print(Arrays.toString(findMissingAndRepeatedValues(grid)));
+	}
+	public static int[] findMissingAndRepeatedValues(int[][] grid){
+		int n=grid.length;
+		HashMap<Integer,Integer> map=new HashMap<>();
+		for(int[] row:grid){
+			for(int num:row){
+				map.put(num,map.getOrDefault(num,0)+1);
+			}
+		}
+		int repeated=-1, missing=-1;
+		for(int i=1;i<=n*n;i++){
+			int freq=map.getOrDefault(i,0);
+			if(freq==2) repeated=i;
+			if(freq==0) missing=i;
+		}
+		return new int[]{repeated,missing};
+	}
 }
