@@ -25,21 +25,21 @@ class MaximumAverageSubarrayIBruteforce{
 	}
 	public static double findMaxAverage(int[] nums,int k){
 		int n=nums.length;
-    int sum=0;
-    for(int i=0;i<k;i++){
-      sum+=nums[i];
-    }
-    double maxAvg=(double)sum/k;
-    for(int i=1;i<=n-k;i++){
-      sum=0;
-      for(int j=i;j<i+k;j++){
-        sum+=nums[j];
-      }
-      double avg=(double)sum/k;
-      if(avg>maxAvg){
-        maxAvg=avg;
-      }
-    }
-    return maxAvg;
+    	int sum=0;
+    	for(int i=0;i<k;i++){
+      		sum+=nums[i];
+    	}
+    	double maxAvg=(double)sum/k;
+    	for(int i=1;i<=n-k;i++){
+      		sum=0;
+      		for(int j=i;j<i+k;j++){
+        		sum+=nums[j];
+      		}
+      		double avg=(double)sum/k;
+      		if(avg>maxAvg){
+        		maxAvg=avg;
+      		}
+    	}
+    	return maxAvg;
 	}
 }
