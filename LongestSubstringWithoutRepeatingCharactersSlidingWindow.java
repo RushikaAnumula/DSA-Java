@@ -24,17 +24,17 @@ class LongestSubstringWithoutRepeatingCharactersSlidingWindow{
 	}
 	public static int lengthOfLongestSubstring(String s){
 		int maxLen=0;
-		int l=0,r=0;
+		int i=0,j=0;
 		HashSet<Character> set=new HashSet<>();
-		while(r<s.length()){
-			char c=s.charAt(r);
+		while(j<s.length()){
+			char c=s.charAt(j);
 			while(set.contains(c)){
-				set.remove(s.charAt(l));
-				l++;
+				set.remove(s.charAt(i));
+				i++;
 			}
 			set.add(c);
-			maxLen=Math.max(maxLen,r-l+1);
-			r++;
+			maxLen=Math.max(maxLen,j-i+1);
+			j++;
 		}
 		return maxLen;
 	}
