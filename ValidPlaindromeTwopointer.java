@@ -15,26 +15,25 @@ Explanation: s is an empty string "" after removing non-alphanumeric characters.
 Since an empty string reads the same forward and backward, it is a palindrome.*/
 import java.util.*;
 class ValidPlaindromeTwopointer{
-  public boolean isPalindrome(String s){
-    StringBuilder chars=new StringBuilder();
-    for(char c:s.toCharArray()){
-      if(Character.isLetterOrDigit(c)){
-        chars.append(Character.toLowerCase(c));
-      }
-    }
-    int left=0,right=chars.length()-1;
-    while(left<right){
-      if(chars.charAt(left)!=chars.charAt(right)) return false;
-      left++;
-      right--;
-    }
-    return true;
-  }
+	public boolean isPalindrome(String s){
+		StringBuilder chars=new StringBuilder();
+	    for(char c:s.toCharArray()){
+			if(Character.isLetterOrDigit(c)){
+	        chars.append(Character.toLowerCase(c));
+			}
+	    }
+	    int left=0,right=chars.length()-1;
+	    while(left<right){
+			if(chars.charAt(left)!=chars.charAt(right)) return false;
+			left++;
+	      	right--;
+	    }
+	    return true;
+	}
 	public static void main(String[] args){
 		Scanner sc=new Scanner(System.in);
 		String s=sc.nextLine();
 		ValidPlaindromeTwopointer obj=new ValidPlaindromeTwopointer();
 		System.out.print(obj.isPalindrome(s));
 	}
-}
 }
