@@ -35,8 +35,9 @@ class MaximumSumOfDistinctSubarraysWithlengthKSlidingwindow{
 		System.out.print(maximumSubarraySum(nums,k));
 	}
 	public static long maximumSubarraySum(int[] nums,int k){
+		int sum=0,maxSum=0;
 		HashSet<Integer> set=new HashSet<>();
-		int i=0,maxSum=0,sum=0;
+		int i=0;
 		for(int j=0;j<nums.length;j++){
 			while(set.contains(nums[j])){
 				set.remove(nums[i]);
