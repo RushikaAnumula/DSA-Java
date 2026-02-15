@@ -37,12 +37,12 @@ class FindTheKbeautyOfANumberSlidingWindow{
 	public static int divisorSubstrings(int num, int k){
 		String s=Integer.toString(num);
 		int n=s.length();
-		int l=0,count=0;
-		for(int r=0;r<n;r++){
-			if(r-l+1==k){
-				int subStr=Integer.parseInt(s.substring(l,r+1));
-				if(subStr!=0 && num%subStr==0) count++;
-				l++;
+		int i=0;count=0;
+		for(int j=0;j<n;j++){
+			if(j-i+1==k){
+				int subStr=Integer.parseInt(s.substring(i,j+1));
+				if(subStr!=0 && num%substr==0) count++;
+				i++;
 			}
 		}
 		return count;
