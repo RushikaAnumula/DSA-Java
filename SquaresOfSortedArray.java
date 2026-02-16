@@ -12,7 +12,7 @@ input=4
 -5 -2 3 6
 output=[4, 9, 25, 36] */
 import java.util.*;
-class Squares{
+class SquaresOfSortedArray{
   public static void main(String[] args){
     Scanner sc=new Scanner(System.in);
     int num=sc.nextInt();
