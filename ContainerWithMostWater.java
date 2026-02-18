@@ -21,16 +21,15 @@ class ContainerWithMostWater{
 		System.out.print(maxArea(height));
 	}
 	public static int maxArea(int[] height){
-		int left=0;
-		int right=height.length-1;
-		int maxArea=0;
+		int maxWater=0,left=0,right=0;
 		while(left<right){
-			int h=Math.min(height[left],height[right]);
-			int w=right-left;
-			maxArea=Math.max(maxArea,h*w);
+			int ht=Math.min(height[left],height[right]);
+			int width=right-left;
+			int currWater=ht*width;
+			maxWater=Math.max(maxWater,currWater);
 			if(height[left]<height[right]) left++;
 			else right--;
 		}
-		return maxArea;
+		return maxWater;
 	}
 }
