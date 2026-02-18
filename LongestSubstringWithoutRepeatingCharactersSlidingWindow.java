@@ -23,16 +23,15 @@ class LongestSubstringWithoutRepeatingCharactersSlidingWindow{
 		System.out.print(lengthOfLongestSubstring(s));
 	}
 	public static int lengthOfLongestSubstring(String s){
-		int maxLen=0;
+		int maxLen=0,i=0,j=0;
 		HashSet<Character> set=new HashSet<>();
-		int i=0,j=0;
 		while(j<s.length()){
-			char c=s.charAt(j));
-			if(set.contains(j)){
+			char c=s.charAt(j);
+			while(set.contains(c)){
 				set.remove(s.charAt(i));
 				i++;
 			}
-			set.add(i);
+			set.add(c);
 			maxLen=Math.max(maxLen,j-i+1);
 			j++;
 		}
