@@ -24,7 +24,6 @@ class MaximumAverageSubarrayISlidingWindow{
 		System.out.print(findMaxAverage(nums,n,k));
 	}
 	public static double findMaxAverage(int[] nums,int n,int k){
-		int n=nums.length;
 		int sum=0;
 		for(int i=0;i<k;i++){
 			sum+=nums[i];
@@ -33,9 +32,7 @@ class MaximumAverageSubarrayISlidingWindow{
 		for(int i=k;i<n;i++){
 			sum+=nums[i]-nums[i-k];
 			double avg=(double)sum/k;
-			if(avg>maxAvg){
-				maxAvg=avg;
-			}
+			if(avg>maxAvg) maxAvg=avg;
 		}
 		return maxAvg;
 	}
